@@ -8,8 +8,8 @@ print(line_items[0])
 for i in line_items:    
     list = []
     list = i.split()
+    deltas = []
     for index, value in enumerate(list):
-        deltas = []
         final_list.append(list)
         if index < (len(list) - 1):
             index=int(index)
@@ -17,7 +17,10 @@ for i in line_items:
             adj = int(list[index + 1])
             delta = adj - value
             absolute = abs(delta)
-            if absolute > 1 or absolute <=3:
-                    deltas.append(delta)
+            if absolute > 0 or absolute <=3:
+                    if (adj > 0 and value < 0) or ( adj < 0 and value > 0):
+                        break
+                    else:
+                     deltas.append(delta)
         print(deltas)
  
