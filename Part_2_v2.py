@@ -21,6 +21,7 @@ for i in line_items:
                     if (adj > 0 and value < 0) or ( adj < 0 and value > 0):
                         break
                     else:
-                     deltas.append(delta)
-        print(deltas)
+                        Return i
+    final_list.append(i)
+print(final_list)
  
