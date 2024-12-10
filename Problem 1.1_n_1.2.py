@@ -2,7 +2,7 @@
 import pandas
 from collections import Counter
 
-with open('data.txt','r') as file:
+with open('Day_1.txt','r') as file:
     content = file.read()
 
 line_items = content.splitlines()
