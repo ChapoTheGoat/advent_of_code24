@@ -19,16 +19,16 @@ for i in line_items:
             delta = adj - value
             absolute = abs(delta)
             if absolute < 1 or absolute > 3:
-                   condition_one_met = False
-                   break
+                condition_one_met = False
+                break
             else:
-                   deltas.append(delta)
+                deltas.append(delta)
     if condition_one_met:
         for index, value in enumerate(deltas):
-            neg = value < 0
+            is_neg = value < 0
             if index < (len(deltas) - 1):
-                adj_neg = deltas[index + 1 ] < 0
-                if adj_neg != neg:
+                is_adj_neg = deltas[index + 1] < 0
+                if is_adj_neg != is_neg:
                     condition_two_met = False
                     break
         if condition_two_met:
@@ -36,3 +36,4 @@ for i in line_items:
             count += 1
 print(count)
 print(len(final_list))
+#Answer 379
