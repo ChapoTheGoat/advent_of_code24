@@ -1,6 +1,6 @@
 import re
 
-with open(r'C:\Users\ggama\OneDrive - Metro Nashville Gov\Documents\GITHUB\advent_of_code24\Question_3\Day_3.txt','r') as file:
+with open(r'C:\Users\ggama\OneDrive - Metro Nashville Gov\Documents\GITHUB\advent_of_code24\Question_3\Day_3.1.txt','r') as file:
     content = file.read()
 
 int_list = re.findall(r"mul\((\d+){1,4},(\d+){1,4}\)",content)
